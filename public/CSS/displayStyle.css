@@ -1,0 +1,130 @@
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height: 100vh;
+   
+}
+#container{
+    /* border: 1px solid red; */
+    height: 100%;
+}
+
+/* nav section */
+#container #nav{
+    background-color: #6c5ce7;
+    text-align: center;
+    padding:  .5% 1%;
+    color: #fff;
+}
+/* End : nav section */
+
+/* main section */
+#container #content-section{
+    height: 78%;
+    /* border: 1px solid fuchsia; */
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#container #content-section div:nth-child(2){
+    /* border: 1px solid brown; */
+    background-color: #34495e;
+    width: 70%;
+    padding: 0 1% 1% 1%;
+    overflow-y: scroll;
+}
+
+#container #content-section div:nth-child(2) a{
+    text-decoration: none;
+}
+
+#container #content-section div:nth-child(2) a div{
+    /* border: 1px solid red; */
+    margin-top: 1%;
+    cursor: pointer;
+    background-color: #6c5ce7;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    padding: 0.5%;
+}
+#container #content-section div:nth-child(2) div p{
+    font-size: 14px
+}
+#container #content-section div:nth-child(2) div:hover{
+    background-color: #8c7ae6;
+}
+
+
+#container #content-section div:nth-child(3) a input[type="button"]{
+    width: 20%;
+    height: 35px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #6c5ce7;
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+    padding: 1%;
+}
+#container #content-section div:nth-child(3) a input[type="button"]:hover{
+    background-color: #a29bfe;
+}
+
+
+/* End : main section */
+
+
+/* footer section */
+#container #footer{
+    background-color: #6c5ce7;
+    text-align: center;
+    padding: 1%;
+}
+/* End : footer section */
+
+
+
+/* media query */
+
+/* nav */
+
+@media (max-width: 900px){
+    #container #nav{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px){
+    #container #nav{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px){
+    #container #nav{
+        font-size: 9px;
+        padding: 1.5% 0;
+    }
+}
+
+/*End:  nav */
+
+/* main content */
+@media (max-width:1000px){
+    #container #content-section #info{
+        width: 90%;
+    }
+}
+
+@media (max-width:600px){
+
+    #container #content-section #info{
+        width: 100%;
+    }
+}

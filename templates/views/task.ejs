@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Connecing CSS -->
+    <link rel="stylesheet" href="/CSS/taskStyle.css">
+    <title>Task</title>
+</head>
+<body>
+    <div id="container">
+        <!-- nav section -->
+        <div id="nav">
+            <%- include('../partials/nav') %>
+        </div>
+
+        <!-- content section -->
+        <div id="content-section">
+            <!-- id and name -->
+            <div id="info">
+                <div <%= taskUpdate._id %>>
+                    <p>ID : <%= taskUpdate.userid %></p>
+                    <p>Name : <%= taskUpdate.userName %></p>
+                    <p>Task : <%= taskUpdate.task %></p>
+                    <p>Status : <%= taskUpdate.status %></p>
+                </div>
+            </div>
+
+            <!-- task -->
+            <div id="task">
+                <h1>Complete Your Task</h1>
+                <form action="/task/<%= taskUpdate._id %>" method="post">
+                    <label for="task">Task</label>
+                    <textarea name="task" placeholder="<%= taskUpdate.task %>" required></textarea>
+                    <label for="status">Work Status (If the task is complete then write complete)</label>
+                    <input type="text" name="status" value="<%= taskUpdate.status %>" id="status" required>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+        <!-- footer section -->
+        <div id="footer">
+            <%-include('../partials/social');%>
+        </div>
+    </div>
+</body>
+</html>

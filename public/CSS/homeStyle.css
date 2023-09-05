@@ -1,0 +1,164 @@
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height: 100vh;
+   
+}
+#container{
+    /* border: 1px solid red; */
+    height: 100%;
+}
+
+/* nav section */
+#container #nav{
+    background-color: #6c5ce7;
+    text-align: center;
+    padding:  .5% 1%;
+    color: #fff;
+}
+/* End : nav section */
+
+#error{
+    background-color: #eb4d4b;
+    padding: .5%;
+    color: #fff;
+}
+
+
+/* main section */
+#container #content-section{
+    height: 75%;
+    /* border: 1px solid green; */
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container #content-section form{
+    /* border: 1px solid fuchsia; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+}
+#container #content-section form label{
+    font-size: 14px
+}
+#container #content-section form input[type="number"]{
+    height: 35px;
+    padding: 0 1%;
+    outline: none;
+}
+#container #content-section form label:nth-child(4){
+    margin-top: 10px;
+}
+#container #content-section form input[type="text"]{
+    height: 35px;
+    padding: 0 1%;
+    outline: none;
+}
+
+#container #content-section form label:nth-child(6){
+    margin-top: 10px;
+}
+
+#container #content-section form label:nth-child(8){
+    margin-top: 10px;
+}
+
+#container #content-section form #status{
+    cursor: not-allowed;
+}
+
+#container #content-section form textarea{
+    height: 60px;
+    padding: 1%;
+    outline: none;
+    resize: none;
+}
+
+#container #content-section form div input[type="submit"]{
+    width: 20%;
+    height: 35px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #6c5ce7;
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+}
+#container #content-section form div input[type="submit"]:hover{
+    background-color: #a29bfe;
+}
+
+
+#container #content-section form div a input[type="button"]{
+    width: 20%;
+    height: 35px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #6c5ce7;
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+}
+#container #content-section form div a input[type="button"]:hover{
+    background-color: #a29bfe;
+}
+
+
+
+/* End : main section */
+
+
+/* footer section */
+#container #footer{
+    background-color: #6c5ce7;
+    text-align: center;
+    padding: 1%;
+}
+/* End : footer section */
+
+
+
+/* media query */
+
+/* nav */
+
+@media (max-width: 900px){
+    #container #nav{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px){
+    #container #nav{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px){
+    #container #nav{
+        font-size: 9px;
+        padding: 1.5% 0;
+    }
+}
+
+/*End:  nav */
+
+/* main content */
+@media (max-width:1000px){
+    #container #content-section form{
+        width: 70%;
+    }
+}
+
+@media (max-width:600px){
+    #container #content-section form{
+        width: 100%;
+    }
+}

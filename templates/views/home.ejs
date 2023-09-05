@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Connecing CSS -->
+    <link rel="stylesheet" href="/CSS/homeStyle.css">
+    <title>Home</title>
+</head>
+<body>
+    <div id="container">
+        <!-- nav section -->
+        <div id="nav">
+            <%- include('../partials/nav') %>
+        </div>
+         <!--  error code -->
+            <% if (locals.error) { %>
+                <h3 id="error"> <%= locals.error %> </h3>
+            <% } %>
+        <!-- content section -->
+        <div id="content-section">
+            <form action="/" method="post">
+                <h1 style="text-align: center;margin-bottom: 50px;">Add User</h1>
+                <label for="userid">ID</label>
+                <input type="number" name="userid" id="userid" placeholder="Enter ID" required>
+                <label for="userName">New User</label>
+                <input type="text" name="userName" id="userName" placeholder="Enter User Name" required>
+                <label for="task">Task</label>
+                <textarea name="task" id="task" placeholder="Write Task From Here..." required></textarea>
+                <label for="status">Work Status</label>
+                <input type="text" name="status" value="Process" id="status" required readonly>
+                <div>
+                    <input type="submit" value="Add">
+                    <a href="/display"><input type="button" value="Task"></a>
+                </div>
+            </form>
+        </div>
+        <!-- footer section -->
+        <div id="footer">
+            <%-include('../partials/social');%>
+        </div>
+    </div>
+</body>
+</html>
+

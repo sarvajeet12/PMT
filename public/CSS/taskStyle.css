@@ -1,0 +1,152 @@
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height: 100vh;
+   
+}
+#container{
+    /* border: 1px solid red; */
+    height: 100%;
+}
+
+/* nav section */
+#container #nav{
+    background-color: #6c5ce7;
+    text-align: center;
+    padding: .5%;
+    color: #fff;
+}
+/* End : nav section */
+
+/* main section */
+#container #content-section{
+    height: 78%;
+    /* border: 2px solid fuchsia; */
+    padding: 1% 2%;
+}
+
+#container #content-section #info{
+    /* border: 1px solid brown; */
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container #content-section #info div{
+    width: 70%;
+    background-color: #6c5ce7;
+    padding: 2%;
+    color: #fff;
+}
+
+
+
+#container #content-section #task{
+    /* border: 1px solid peru; */
+    height: 70%;
+}
+
+#container #content-section #task h1{
+    text-align: center;
+}
+
+#container #content-section #task form{
+    /* border: 1px solid fuchsia; */
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+
+#container #content-section #task form input:nth-child(4){
+    height: 35px;
+    padding: 0 1%;
+    outline: none;
+}
+
+#container #content-section #task form textarea{
+    height: 100px;
+    resize: none;
+    padding: 1%;
+    outline: none;
+}
+#container #content-section #task form label{
+    font-size: 14px;
+}
+#container #content-section #task form label:nth-child(3){
+    margin-top: 20px
+}
+#container #content-section #task form input[type="submit"]{
+    width: 20%;
+    height: 35px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #6c5ce7;
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+}
+#container #content-section #task form input[type="submit"]:hover{
+    background-color: #a29bfe;
+}
+
+
+
+/* footer section */
+#container #footer{
+    background-color: #6c5ce7;
+    text-align: center;
+    padding: 1%;
+}
+/* End : footer section */
+
+/* media query */
+
+/* nav */
+
+@media (max-width: 900px){
+    #container #nav{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px){
+    #container #nav{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px){
+    #container #nav{
+        font-size: 9px;
+        padding: 1.5% 0;
+    }
+}
+
+/*End:  nav */
+
+/* main content */
+
+@media (max-width: 800px){
+    #container #content-section #info div{
+        width: 80%;
+    }
+
+    #container #content-section #task form{
+        width: 70%;
+    }
+}
+
+@media (max-width: 600px){
+    #container #content-section #info div{
+        width: 100%;
+    }
+
+    #container #content-section #task form{
+        width: 100%;
+    }
+}
